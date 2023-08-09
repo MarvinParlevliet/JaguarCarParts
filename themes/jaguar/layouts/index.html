@@ -1,0 +1,10 @@
+{{ define "main" }}
+{{ partial "herobox.html" . }}
+<article class="container">
+  {{ partial "messagebox.html" . }}
+
+  {{ .Content }}
+</article>
+</div>
+
+{{ end }}

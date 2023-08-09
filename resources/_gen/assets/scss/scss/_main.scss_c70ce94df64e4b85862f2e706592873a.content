@@ -1,0 +1,456 @@
+/*
+Browsers don't directly understand SCSS. You will have to compile it to a
+regular CSS file first. You may want to learn about regular old CSS before
+going through this process, heh ^^'
+
+You will need to install Dart SASS (from https://sass-lang.com/install/). I went
+with Install Anywhere (Standalone) myself.
+
+Then navigate to this directory (scss) and enter the following from within
+the command line or terminal:
+
+sass -w _main.scss ../css/scss_style.css
+
+This will compile the file to 'css/scss_style.css' and watch for any changes.
+Press CTRL + C to end the application.
+*/
+/* Variables */
+/* ** Debug Options ** */
+/* ** Fonts ** */
+/* *** Font Weights *** */
+/* ** Spacings and Border Radius ** */
+/* ** Colors ** */
+/* previously cad5e3 */
+/* ** Breakpoints ** */
+/* ** Buttons ** */
+/* ** Box ** */
+/* ** Navigation Bar ** */
+/*
+
+
+
+
+
+
+
+
+
+*/
+/* roboto-300 - latin */
+@font-face {
+  font-display: swap;
+  /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 300;
+  src: url("../fonts/roboto/roboto-v30-latin-300.woff2") format("woff2");
+  /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */ }
+
+/* roboto-300italic - latin */
+@font-face {
+  font-display: swap;
+  /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Roboto';
+  font-style: italic;
+  font-weight: 300;
+  src: url("../fonts/roboto/roboto-v30-latin-300italic.woff2") format("woff2");
+  /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */ }
+
+/* roboto-regular - latin */
+@font-face {
+  font-display: swap;
+  /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/roboto/roboto-v30-latin-regular.woff2") format("woff2");
+  /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */ }
+
+/* roboto-italic - latin */
+@font-face {
+  font-display: swap;
+  /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Roboto';
+  font-style: italic;
+  font-weight: 400;
+  src: url("../fonts/roboto/roboto-v30-latin-italic.woff2") format("woff2");
+  /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */ }
+
+/* roboto-500 - latin */
+@font-face {
+  font-display: swap;
+  /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 500;
+  src: url("../fonts/roboto/roboto-v30-latin-500.woff2") format("woff2");
+  /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */ }
+
+/* roboto-500italic - latin */
+@font-face {
+  font-display: swap;
+  /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Roboto';
+  font-style: italic;
+  font-weight: 500;
+  src: url("../fonts/roboto/roboto-v30-latin-500italic.woff2") format("woff2");
+  /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */ }
+
+/* roboto-700 - latin */
+@font-face {
+  font-display: swap;
+  /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 700;
+  src: url("../fonts/roboto/roboto-v30-latin-700.woff2") format("woff2");
+  /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */ }
+
+/* roboto-700italic - latin */
+@font-face {
+  font-display: swap;
+  /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Roboto';
+  font-style: italic;
+  font-weight: 700;
+  src: url("../fonts/roboto/roboto-v30-latin-700italic.woff2") format("woff2");
+  /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */ }
+
+/* roboto-900 - latin */
+@font-face {
+  font-display: swap;
+  /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 900;
+  src: url("../fonts/roboto/roboto-v30-latin-900.woff2") format("woff2");
+  /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */ }
+
+/* roboto-900italic - latin */
+@font-face {
+  font-display: swap;
+  /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Roboto';
+  font-style: italic;
+  font-weight: 900;
+  src: url("../fonts/roboto/roboto-v30-latin-900italic.woff2") format("woff2");
+  /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */ }
+
+/* syne-regular - latin */
+@font-face {
+  font-display: swap;
+  /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Syne';
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/syne/syne-v16-latin-regular.woff2") format("woff2");
+  /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */ }
+
+/* syne-500 - latin */
+@font-face {
+  font-display: swap;
+  /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Syne';
+  font-style: normal;
+  font-weight: 500;
+  src: url("../fonts/syne/syne-v16-latin-500.woff2") format("woff2");
+  /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */ }
+
+/* syne-600 - latin */
+@font-face {
+  font-display: swap;
+  /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Syne';
+  font-style: normal;
+  font-weight: 600;
+  src: url("../fonts/syne/syne-v16-latin-600.woff2") format("woff2");
+  /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */ }
+
+/* syne-700 - latin */
+@font-face {
+  font-display: swap;
+  /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Syne';
+  font-style: normal;
+  font-weight: 700;
+  src: url("../fonts/syne/syne-v16-latin-700.woff2") format("woff2");
+  /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */ }
+
+/* syne-800 - latin */
+@font-face {
+  font-display: swap;
+  /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Syne';
+  font-style: normal;
+  font-weight: 800;
+  src: url("../fonts/syne/syne-v16-latin-800.woff2") format("woff2");
+  /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */ }
+
+::selection {
+  background: #55b947;
+  color: white; }
+
+* {
+  box-sizing: border-box;
+  /* Fixes calculations of widths (borders and paddings) */
+  padding: 0;
+  margin: 0; }
+
+body, html {
+  height: 100%; }
+
+body {
+  background-color: black;
+  font-family: "Roboto";
+  font-size: 20px;
+  color: white; }
+
+h1, h2, h3, h4 {
+  font-family: "Syne"; }
+
+p {
+  line-height: 1.4;
+  text-align: justify; }
+
+/* box container */
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  /* Box itself. Applies only to direct divs inside of the main selector (in this case, only one) */ }
+  @media only screen and (max-width: 768px) {
+    main {
+      align-items: unset; } }
+  main > div {
+    border-radius: 16px;
+    max-width: 768px;
+    max-height: 640px;
+    border: 1px solid #55b947;
+    background-color: black;
+    color: white;
+    padding: 32px;
+    margin: 48px;
+    text-align: center;
+    box-shadow: 0px 0px 0px #55b947;
+    transition: box-shadow 1s;
+    overflow-x: scroll; }
+    @media only screen and (max-width: 768px) {
+      main > div {
+        width: 100%;
+        max-height: unset;
+        border-radius: 0;
+        margin: 0;
+        box-shadow: 0px 0px 0px limegreen;
+        border-left: none;
+        border-right: none; } }
+    main > div:hover {
+      box-shadow: 0px 0px 48px #55b947; }
+
+/* Plays shadow animation right after loading the page (using some JavaScript magic in load.js) */
+div.loaded {
+  box-shadow: 0px 0px 24px #55b947; }
+
+/* Button container with flex, so it will show up as column in mobile (see responsive.css) */
+div.buttonContainer {
+  font-size: 0;
+  margin-top: 32px;
+  margin-bottom: 32px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center; }
+  @media only screen and (max-width: 768px) {
+    div.buttonContainer {
+      flex-direction: column; } }
+  @media only screen and (max-width: 768px) {
+    div.buttonContainer button {
+      margin-left: unset;
+      margin-right: unset;
+      margin-top: 5px;
+      margin-bottom: 5px; } }
+p {
+  margin-top: 16px;
+  margin-bottom: 16px; }
+
+.container {
+  max-width: 1000px;
+  margin: 16px auto; }
+
+.align-bottom {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0; }
+
+/* color will be added to anything you will give this class (see the green button) */
+.bg-cta {
+  background-color: #55b947; }
+
+.flex-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 32px;
+  flex-wrap: nowrap;
+  flex-shrink: 0;
+  flex-grow: 0;
+  margin: 32px 0; }
+
+.box-container {
+  background: white;
+  width: 100%; }
+  .box-container.box-glow {
+    border: 1px solid #55b947;
+    border-radius: 16px;
+    box-shadow: 0px 0px 6px #55b947;
+    padding: 16px;
+    transition: .5s; }
+    .box-container.box-glow:hover {
+      box-shadow: 0px 4px 12px #55b947;
+      transform: translateY(-8px); }
+  .box-container h1 {
+    font-family: "Syne";
+    font-weight: 700;
+    font-size: 1.5rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 16px;
+    flex-wrap: nowrap;
+    flex-shrink: 0;
+    flex-grow: 0; }
+  .box-container p:last-of-type {
+    margin-bottom: unset; }
+
+footer {
+  margin: 32px;
+  margin-top: calc( 48px * 1.75);
+  margin-bottom: 0;
+  border-top-left-radius: 32px;
+  border-top-right-radius: 32px;
+  padding: 48px;
+  background-color: #000000; }
+
+/* Variables */
+/* Buttons */
+button {
+  background-color: white;
+  border: none;
+  margin: 0;
+  padding: calc(12px * 1) calc(12px * 2);
+  border-radius: calc(16px) calc(16px / 3);
+  color: white;
+  font-size: 1rem;
+  transition: 0.3s; }
+  button:not(:first-child) {
+    margin-left: calc(10px/2); }
+  button:not(:last-child) {
+    margin-right: calc(10px/2); }
+  button:disabled {
+    filter: brightness(60%) contrast(60%); }
+  button:hover:not(:disabled) {
+    filter: brightness(125%); }
+  button:active:not(:disabled) {
+    filter: brightness(90%); }
+
+/* Keyframe Animations */
+@keyframes moveBackground {
+  from {
+    background-position: 0 0; }
+  to {
+    background-position: 100% 100%; } }
+
+@keyframes logoAnimation {
+  0% {
+    transform: rotate(0deg); }
+  25% {
+    transform: rotate(-5deg); }
+  50% {
+    transform: rotate(5deg); }
+  75% {
+    transform: rotate(-5deg); }
+  100% {
+    transform: rotate(0deg); } }
+
+header {
+  padding: 16px;
+  max-height: 80px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: nowrap;
+  flex-shrink: 0;
+  flex-grow: 0;
+  z-index: 1000;
+  transition: margin 0.3s, background-color 0.3s, top 0.3s;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0; }
+  header nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: nowrap;
+    flex-shrink: 0;
+    flex-grow: 0;
+    transition: padding 0.3s;
+    width: 100%;
+    max-width: 1200px; }
+    header nav #logo {
+      display: block;
+      transform: rotate(0deg);
+      transition: 1s; }
+      header nav #logo:hover {
+        animation: logoAnimation 1s; }
+    header nav a.nav-link {
+      margin: calc(16px / 2);
+      color: white;
+      text-decoration: none;
+      font-size: 1rem; }
+      header nav a.nav-link svg {
+        vertical-align: middle; }
+  header.floating {
+    margin: 16px;
+    border-radius: 16px;
+    background-color: #000000; }
+    header.floating nav {
+      padding: 0 16px; }
+
+.herobox {
+  position: relative;
+  background-color: gray;
+  width: 100%;
+  height: 100vh;
+  background-size: cover !important;
+  background-repeat: no-repeat !important;
+  background-position: 40% 50% !important; }
+  .herobox.backgroundOverlay:before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, rgba(65, 88, 208, 0.4) 0%, rgba(200, 80, 192, 0.4) 46%, rgba(255, 204, 112, 0.4) 100%); }
+
+blockquote {
+  margin: 32px 0;
+  border: 2px solid white;
+  border-radius: calc( 16px / 2);
+  border-left: 6px solid white;
+  padding: 16px; }
+  blockquote h1 {
+    font-family: "Syne";
+    font-weight: 700;
+    font-size: 1.5rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 16px;
+    flex-wrap: nowrap;
+    flex-shrink: 0;
+    flex-grow: 0; }
+  blockquote.alert {
+    border-color: #f4c430; }
+  blockquote p:last-of-type {
+    margin-bottom: unset; }

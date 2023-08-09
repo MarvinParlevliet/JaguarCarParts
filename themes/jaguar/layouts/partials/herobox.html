@@ -1,0 +1,8 @@
+<div class="herobox {{ with .Params.BackgroundOverlay }} backgroundOverlay {{ end }}" {{with .Params.Background}} style="background: {{ $.Params.Background | safeCSS }}" {{end}}>
+  <div class="container align-bottom">
+    <h1 class="title">{{ .Site.Title }}</h1>
+    {{ if .Params.Subtitle }}
+    <p>{{ .Params.Subtitle }}</p>
+    {{ end }}
+  </div>
+</div>

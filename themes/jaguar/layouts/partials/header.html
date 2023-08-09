@@ -1,0 +1,45 @@
+<header class="navigation-header">
+  <nav id="nav">
+    <div>
+      <a id="logo" href="/">{{ with .Site.Params.navigation.logo }} <img src="{{ $.Site.Params.navigation.logo }}" alt="logo" > {{ end }}{{ with .Site.Params.navigation.brand }}{{ . | markdownify }}{{ end }}</a>
+    </div>
+    <div id="links">
+      {{ range .Site.Menus.main }}
+      <a class="nav-link" href="{{ .URL }}">
+      {{ if .Pre }}
+      {{ $icon := printf "<i data-feather=\"%s\"></i> " .Pre | safeHTML }}
+      {{ $icon }}
+      {{ end }}
+      {{ $text := print .Name | safeHTML }}
+      {{ $text }}
+      </a>
+      {{ end }}
+    </div>
+    {{ if .Site.Params.Buttons }}
+    <div>
+      {{ range .Site.Params.Buttons.main }}
+      <button>{{ .name }}</button>
+      {{ end }}
+    </div>
+    {{ end }}
+  </nav>
+</header>
+
+
+
+<!--
+<div id="nav-border">
+    <nav id="nav" class=" container nav justify-content-center">
+        {{ range .Site.Menus.main }}
+        <a class="nav-link" href="{{ .URL }}">
+        {{ if .Pre }}
+        {{ $icon := printf "<i data-feather=\"%s\"></i> " .Pre | safeHTML }}
+        {{ $icon }}
+        {{ end }}
+        {{ $text := print .Name | safeHTML }}
+        {{ $text }}
+        </a>
+        {{ end }}
+    </nav>
+</div>
+-->

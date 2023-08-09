@@ -1,0 +1,35 @@
+/* Variables */
+
+
+
+/* Buttons */
+button {
+  background-color: $button-bg-color;
+  border: none;
+  margin: 0;
+  padding: calc(#{ $button-padding } * 1) calc(#{ $button-padding } * 2);
+  border-radius: $button-border-radius;
+  color: $button-fg-color;
+  font-size: $button-font-size;
+  transition: 0.3s;
+
+  &:not(:first-child) {
+    margin-left: calc(#{$button-spacing}/2);
+  }
+
+  &:not(:last-child) {
+    margin-right: calc(#{$button-spacing}/2);
+  }
+
+  &:disabled {
+    filter: brightness(60%)  contrast(60%);
+  }
+
+  &:hover:not(:disabled) {
+    filter: brightness(125%);
+  }
+
+  &:active:not(:disabled) {
+    filter: brightness(90%);
+  }
+}

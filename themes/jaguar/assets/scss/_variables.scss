@@ -1,0 +1,77 @@
+/* Variables */
+
+  /* ** Debug Options ** */
+  $dark-mode: false;
+
+  /* ** Fonts ** */
+
+  $font-primary: 'Syne';
+  $font-secondary: 'Roboto';
+  $font-base-scale: 20px;
+
+    /* *** Font Weights *** */
+    $font-weight-m: 400;
+    $font-weight-l: 700;
+
+  /* ** Spacings and Border Radius ** */
+  $spacing-s: 16px;
+  $spacing-l: 32px;
+  $spacing-xl: 48px;
+
+  $border-radius: 16px;
+
+  /* ** Colors ** */
+
+    $bg-color: black;
+    $fg-color: white;
+
+    $body-bg-color: $bg-color; /* previously cad5e3 */
+    $body-bg-image: url(../img/bg_rsmlogo.svg);
+
+    $selection-fg-color: white;
+    $selection-bg-color: #55b947;
+    $cta-bg-color: #55b947;
+
+    $button-fg-color: white;
+    $button-bg-color: white;
+
+
+
+
+  /* ** Breakpoints ** */
+  $container-max-width: 1000px;
+
+  $breakpoint-desktop: 1200px;
+  $breakpoint-mobile: 768px;
+  $breakpoint-tablet: $breakpoint-mobile;
+
+  /* ** Buttons ** */
+  $button-font-size: 1rem;
+  $button-border-radius: calc(#{ $border-radius } ) calc(#{ $border-radius } / 3 ) ;
+  $button-padding: 12px;
+  $button-spacing: 10px;
+
+  /* ** Box ** */
+  $messagebox-max-width: 768px;
+  $messagebox-max-height: 640px;
+
+  $messagebox-width-mobile: 100%;
+
+  /* ** Navigation Bar ** */
+  $navigationbar-margin: $spacing-s;
+  $navigationbar-padding: $navigationbar-margin;
+  $navigationbar-maxheight: 80px;
+  $navigationbar-borderradius: $border-radius;
+  $navigationbar-link-color: $button-bg-color;
+  $navigationbar-bg-color: #000000;
+/*
+
+
+
+
+
+
+
+
+
+*/

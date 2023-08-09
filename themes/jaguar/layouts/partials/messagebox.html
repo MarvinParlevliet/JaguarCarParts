@@ -1,0 +1,8 @@
+{{ with .Params.Messagebox }}
+<figure class="messageBox">
+  {{ if $.Params.Messagecaption }}
+    <figcaption>{{ $.Params.Messagecaption }}</figcaption>
+  {{ end }}
+  {{ $.Params.Messagebox }}
+</figure>
+{{ end }}

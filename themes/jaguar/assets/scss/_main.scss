@@ -1,0 +1,28 @@
+/*
+Browsers don't directly understand SCSS. You will have to compile it to a
+regular CSS file first. You may want to learn about regular old CSS before
+going through this process, heh ^^'
+
+You will need to install Dart SASS (from https://sass-lang.com/install/). I went
+with Install Anywhere (Standalone) myself.
+
+Then navigate to this directory (scss) and enter the following from within
+the command line or terminal:
+
+sass -w _main.scss ../css/scss_style.css
+
+This will compile the file to 'css/scss_style.css' and watch for any changes.
+Press CTRL + C to end the application.
+*/
+
+@import "_variables.scss";
+@import "_fonts.scss";
+@import "_functions.scss";
+
+@import "core.scss";
+@import "buttons.scss";
+@import "animations.scss";
+
+@import "navigationbar.scss";
+@import "herobox.scss";
+@import "messagebox.scss";

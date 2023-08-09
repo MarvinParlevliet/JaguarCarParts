@@ -1,0 +1,174 @@
+::selection {
+  background: $selection-bg-color;
+  color: $selection-fg-color;
+}
+
+* {
+    box-sizing: border-box; /* Fixes calculations of widths (borders and paddings) */
+    padding: 0;
+    margin: 0;
+}
+
+body, html {
+    height: 100%;
+}
+
+body {
+  background-color: $body-bg-color;
+  font-family: $font-secondary;
+  font-size: $font-base-scale;
+  color: $fg-color;
+}
+
+h1, h2, h3, h4 {
+  font-family: $font-primary;
+}
+
+p { line-height: 1.4; text-align: justify; }
+
+
+
+/* box container */
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+
+  @include devices (mobile) {
+    align-items: unset;
+  }
+
+  /* Box itself. Applies only to direct divs inside of the main selector (in this case, only one) */
+  > div {
+    border-radius: $border-radius;
+    max-width: $messagebox-max-width;
+    max-height: $messagebox-max-height;
+    border: 1px solid $cta-bg-color;
+    background-color: $bg-color;
+    color: $fg-color;
+    padding: 32px;
+    margin: 48px;
+    text-align: center;
+    box-shadow: 0px 0px 0px $cta-bg-color;
+    transition: box-shadow 1s;
+    overflow-x: scroll;
+
+    @include devices(mobile) {
+      width: $messagebox-width-mobile;
+      max-height: unset;
+      border-radius: 0;
+      margin: 0;
+      box-shadow: 0px 0px 0px limegreen;
+      border-left: none;
+      border-right: none;
+    }
+
+    &:hover {
+      box-shadow: 0px 0px 48px $cta-bg-color;
+    }
+  }
+}
+
+/* Plays shadow animation right after loading the page (using some JavaScript magic in load.js) */
+div.loaded {
+  box-shadow: 0px 0px 24px $cta-bg-color;
+
+}
+
+/* Button container with flex, so it will show up as column in mobile (see responsive.css) */
+div.buttonContainer {
+  font-size: 0;
+  margin-top: $spacing-l;
+  margin-bottom: $spacing-l;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+
+  @include devices(mobile) {
+    flex-direction: column;
+  }
+
+  button {
+    @include devices(mobile) {
+      margin-left: unset;
+      margin-right: unset;
+      margin-top: 5px;
+      margin-bottom: 5px;
+    }
+  }
+}
+
+p {
+  margin-top: $spacing-s;
+  margin-bottom: $spacing-s;
+}
+
+.container {
+    max-width: $container-max-width;
+    margin: 16px auto;
+}
+
+.align-bottom {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+/* color will be added to anything you will give this class (see the green button) */
+.bg-cta {
+  background-color: $cta-bg-color;
+}
+
+
+.flex-container {
+  @include flexbox($justifyContent: space-between, $gap: $spacing-l);
+  
+  margin: $spacing-l 0;
+}
+
+$box-container-bg: white;
+$box-container-box-shadow: 0px 0px 6px $cta-bg-color;
+
+.box-container {
+  background: $box-container-bg;
+  width: 100%;
+  
+  &.box-glow {
+    border: 1px solid $cta-bg-color;
+    border-radius: $border-radius;
+    box-shadow: $box-container-box-shadow;
+    padding: $spacing-s;
+    transition: .5s;
+
+    &:hover {
+      box-shadow: 0px 4px 12px $cta-bg-color;
+      transform: translateY(-8px);
+    }
+  }
+  
+
+
+  h1 {
+    font-family: $font-primary;
+    font-weight: 700;
+    font-size: 1.5rem;
+    
+    @include flexbox($alignItems: center, $gap: $spacing-s);
+  }
+
+  p:last-of-type {
+    margin-bottom: unset;
+  }
+}
+
+footer {
+  margin: $spacing-l;
+  margin-top: calc( #{ $spacing-xl } * 1.75);
+  margin-bottom: 0;
+  border-top-left-radius: $spacing-l;
+  border-top-right-radius: $spacing-l;
+  padding: $spacing-xl; 
+  background-color: $navigationbar-bg-color;
+}

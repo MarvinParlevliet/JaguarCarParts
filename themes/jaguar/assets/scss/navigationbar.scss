@@ -1,0 +1,62 @@
+
+
+header {
+  padding: $navigationbar-padding;
+  max-height: $navigationbar-maxheight;
+  @include flexbox($justifyContent: center);
+  z-index: 1000;
+  transition: margin 0.3s, background-color 0.3s, top 0.3s;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+
+  @include devices(mobile) {
+
+  }
+
+  nav {
+    @include flexbox($justifyContent: space-between, $alignItems: center);
+    transition: padding 0.3s;
+    width: 100%;
+    max-width: 1200px;
+
+
+
+    #logo {
+      display: block;
+      transform: rotate(0deg);
+      transition: 1s;
+
+      &:hover {
+        animation: logoAnimation 1s;
+      }
+    }
+
+    a.nav-link {
+      margin: calc(#{ $navigationbar-margin } / 2);
+      color: $navigationbar-link-color;
+      text-decoration: none;
+      font-size: $button-font-size;
+
+      svg {
+        vertical-align: middle;
+      }
+    }
+  }
+
+  &.floating {
+    margin: $navigationbar-margin;
+
+    border-radius: $navigationbar-borderradius;
+    background-color: $navigationbar-bg-color;
+
+    @include darkMode() {
+      background: $dark-theme-bg-color;
+    }
+
+    nav {
+      padding: 0 $spacing-s;
+    }
+  }
+}

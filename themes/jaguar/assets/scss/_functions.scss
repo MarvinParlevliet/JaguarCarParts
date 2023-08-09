@@ -1,0 +1,60 @@
+@mixin devices ($breakpoint) { //the name of the mixin is devices
+
+    @if $breakpoint == tablet {
+    @media only screen and (max-width: $breakpoint-tablet) {
+      @content;
+    }
+  }
+
+  @if $breakpoint == mobile {
+    @media only screen and (max-width: $breakpoint-mobile) {
+      @content;
+    }
+  }
+}
+
+@mixin flexbox(
+  $display: flex,
+  $direction: row,
+  $placeContent: null,
+  $placeItems: null,
+  $wrap: nowrap,
+  $shrink: 0,
+  $grow: 0,
+  $gap: null,
+  $alignContent: null,
+  $justifyContent: null,
+  $alignItems: null,
+  $justifyItems: null) {
+
+    display: $display;
+    flex-direction: $direction;
+
+    @if $placeContent == null {
+      @if $alignContent   { align-content: $alignContent; }
+      @if $justifyContent { justify-content: $justifyContent; }
+    } @else {
+      place-content: $placeContent;
+    }
+
+    @if $placeItems == null {
+      @if $alignItems   { align-items: $alignItems; }
+      @if $justifyItems { justify-items: $justifyItems; }
+    } @else {
+      place-items: $placeItems;
+    }
+
+    @if $gap { gap: $gap; }
+
+    flex-wrap: $wrap;
+    flex-shrink: $shrink;
+    flex-grow: $grow;
+}
+
+@mixin darkMode {
+  @if($dark-mode) {
+    @media(prefers-color-scheme: dark) {
+      @content;
+    }
+  }
+}

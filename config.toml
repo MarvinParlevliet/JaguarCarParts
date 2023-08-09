@@ -1,0 +1,22 @@
+baseURL = 'http://example.org/'
+languageCode = 'en-us'
+title = 'Jaguar Car Parts'
+theme = 'jaguar'
+
+[taxonomies]
+  category = "categories"
+
+[params.navigation]
+  logo = "/img/rsmlogo.svg"
+
+[menu]
+  [[menu.main]]
+    name = "Tips and Tricks"
+    pre = "help-circle"
+    url = "/posts/"
+    weight = 1
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
